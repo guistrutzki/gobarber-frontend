@@ -1,5 +1,34 @@
 import React from 'react';
+import { FiLogIn } from 'react-icons/fi';
 
-const SignIn: React.FC = () => <h1>sign in</h1>;
+import logoImg from '../../assets/logo.svg';
+
+import { Container, Content, Background } from './styles';
+
+const SignIn: React.FC = () => (
+  <Container>
+    <Content>
+      <img src={logoImg} alt="Logo" />
+
+      <form>
+        <h1>Faça seu logon</h1>
+
+        <input placeholder="E-mail" />
+
+        <input type="password" placeholder="Senha" />
+
+        <button type="submit">Entrar</button>
+
+        <a href="forgot">Esqueci minha senha</a>
+      </form>
+
+      <a href="signin">
+        <FiLogIn />
+        Criar conta
+      </a>
+    </Content>
+    <Background />
+  </Container>
+);
 
 export default SignIn;
